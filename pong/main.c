@@ -47,7 +47,15 @@ int main(int argc, char* argv[]){
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
 
-        //render here
+        //draw peddles
+        SDL_Rect peddle1 = {20, 180, 10, 60} ;// x, y, width, height
+        SDL_Rect peddle2 = {610, 180, 10, 60};
+
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_RenderFillRect(renderer, &peddle1);
+        SDL_RenderFillRect(renderer, &peddle2);
+        
+
 
         //present the renderer
         SDL_RenderPresent(renderer);
